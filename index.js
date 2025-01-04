@@ -1,3 +1,5 @@
+alert("DeepL Translate Widget Script Loaded");
+
 function createDeepLTranslateWidget() {
   const translateDiv = document.createElement("div");
   translateDiv.id = "deepl_translate_element";
@@ -37,6 +39,7 @@ function createDeepLTranslateWidget() {
   });
 }
 
+const hello = "hello";
 function checkForTargetElement() {
   const targetElement = document.querySelector(".cover__header-content-title");
   const buttonExists = document.querySelector("#deepl_translate_element");
