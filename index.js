@@ -5,7 +5,7 @@ function createDeepLTranslateWidget() {
   targetDiv.parentNode.insertBefore(translateDiv, targetDiv.nextSibling);
 
   // Create a select dropdown for languages
-  const languages = ["EN", "DE", "FR", "ES", "IT"];
+  const languages = ["EN", "DE", "FR", "ES", "IT"]; // Add more languages as needed
   const select = document.createElement("select");
   select.id = "deepl_language_selector";
 
@@ -53,7 +53,10 @@ const observer = new MutationObserver(() => {
 observer.observe(document.body, { childList: true, subtree: true });
 
 checkForTargetElement();
+
 const style = document.createElement("style");
-style.textContent =
-  'iframe[id=":1.container"] { display: none !important; } body {top:0!important }; .goog-logo-link{display:none !important;}.goog-te-gadget{ color:transparent!important;} .VIpgJd-ZVi9od-l4eHX-hSRGPd{display: none} .goog-te-combo { background-color:#fff; color:#000000; border: 1px solid transparent; box-shadow: 0 4px 4px rgba(0,0,0,.1); border-radius:3px; padding:6px 8px; transition: transform .3s;} .skiptranslate.goog-te-gadget{ padding-left: 60px; padding-bottom: 20px;} #goog-gt-tt #goog-gt-vt{ display: none !important; } .VIpgJd-ZVi9od-aZ2wEe-wOHMyf.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc { display: none !important; }';
+style.textContent = `
+#deepl_translate_element { padding: 10px; }
+#deepl_language_selector { background-color: #fff; color: #000; border: 1px solid transparent; border-radius: 3px; padding: 6px 8px; }
+`;
 document.head.appendChild(style);
